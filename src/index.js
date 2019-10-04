@@ -16,8 +16,17 @@ import{takeEvery, put} from 'redux-saga/effects'
 function* rootSaga() {
     yield takeEvery('GET_MOVIES', getMovies);
     yield takeEvery('SET_INFO_MOVIE', setInfoMovie);
+    yield takeEvery('UPDATE_MOVIES', updateMovies);
 } 
 
+function* updateMovies(action){
+    try {
+      yield axios.put('/api/movies', action.payload);
+      console.log('PUT REQ:',action.payload)
+    } catch (err){
+      console.log('PUT ERROR:',err);
+    }
+  }
 
 function* getMovies(){
     try{
