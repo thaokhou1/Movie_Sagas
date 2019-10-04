@@ -20,9 +20,9 @@ class InfoPage extends Component {
   handelClick = () => {
     this.props.history.push('/');
   }
-  // edit = () =>{
-  //     this.props.history.push(`/edit/${this.props.match.params.id}`);
-  // }
+  edit = () =>{
+      this.props.history.push(`/edit/${this.props.match.params.id}`);
+  }
   render() {
     return (
       <Router>
