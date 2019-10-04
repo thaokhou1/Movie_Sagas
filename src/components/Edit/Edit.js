@@ -43,6 +43,9 @@ class Edit extends Component {
     this.props.history.push(`/movie/${this.props.match.params.id}`)
     console.log('In submit');
   }
+  handleCancel = () =>{
+    this.props.history.push(`/movie/${this.props.match.params.id}`)
+  }
 
   render() {
     return (
@@ -56,7 +59,7 @@ class Edit extends Component {
           <br />
 
           <button onClick={this.handleSubmit}>Submit Changes</button>
-
+          <button onClick={this.handleCancel}>Cancel Changes</button>
         </div>
       </Router>
     )
