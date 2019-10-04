@@ -26,7 +26,31 @@ router.get('/details/:id', (req, res) => {
       });
   });
 
+  router.put('/', (req, res) => {
+    const updatedMovie = req.body;
+    console.log(updatedMovie);
+    const queryText = `UPDATE movies
+    SET "title" = $1, 
+    "description" = $2
+    WHERE "id"=$3;`;
+  
+    const queryValues = [
+      updatedMovie.title,
+      updatedMovie.description,
+      updatedMovie.id,
 
+    ];
+  
+    pool.query(queryText, [
+      updatedMovie.title,
+      updatedMovie.description,
+      updatedMovie.id,])
+      .then(() => { res.sendStatus(200); })
+      .catch((err) => {
+        console.log('Error completing movies query', err);
+        res.sendStatus(500);
+      });
+  });
 
 
 
