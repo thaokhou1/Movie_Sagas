@@ -19,6 +19,7 @@ class MovieItem extends Component {
             <img onClick={() => this.moreInfo(this.props.movies.id)} src={this.props.movies.poster} />
             <p>{this.props.movies.title}</p>
             <p>{this.props.movies.description}</p>
+           <p>{this.props.movies.name}</p>
          </div>
          </Router>
         )

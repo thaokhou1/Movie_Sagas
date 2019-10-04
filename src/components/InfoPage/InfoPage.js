@@ -35,6 +35,8 @@ class InfoPage extends Component {
             return (
               <div>
                 <p>{thing.description}</p>
+                Genre:
+                <p>{thing.name}</p>
                 
               </div>
             )
