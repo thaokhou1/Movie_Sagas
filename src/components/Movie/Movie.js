@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { connect } from 'react-redux';
-import {withRouter} from 'react-router'
+import MovieList from '../MovieList/MovieList';
 
 class Movie extends Component {
 
@@ -9,14 +7,12 @@ class Movie extends Component {
     return (
       
       <div>
-          <p>hello from movie</p>
+          <h2>Movie List</h2>
+          <MovieList/>
       </div>
  
     );
   }
 }
-const mapStateToProps = reduxState => ({
-    reduxState,
-});
 
-export default connect (mapStateToProps)(Movie);
+export default Movie;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import {HashRouter as Router, Route} from 'react-router-dom';
+import {withRouter} from 'react-router';
 
 
 
@@ -8,16 +9,18 @@ import { connect } from 'react-redux';
 class MovieItem extends Component {
    
 
-    // moreInfo = (id)=>{
-    //     this.props.history.push(`/movie/${id}`)
-    // }
+    moreInfo = (id)=>{
+        this.props.history.push(`/movie/${id}`)
+    }
     render() {
         return (
+            <Router>
          <div>
-            <img src={this.props.movies.poster}/>
+            <img onClick={() => this.moreInfo(this.props.movies.id)} src={this.props.movies.poster} />
             <p>{this.props.movies.title}</p>
             <p>{this.props.movies.description}</p>
          </div>
+         </Router>
         )
     }
 }
@@ -26,4 +29,4 @@ const mapStateToProps = reduxState => ({
     reduxState,
 });
 
-export default connect(mapStateToProps)(MovieItem);
+export default withRouter(connect(mapStateToProps)(MovieItem));
