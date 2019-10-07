@@ -19,7 +19,7 @@ function* rootSaga() {
     yield takeEvery('SET_INFO_MOVIE', setInfoMovie);
     yield takeEvery('UPDATE_MOVIES', updateMovies);
 } 
-
+//create update saga function for edit page
 function* updateMovies(action){
     try {
       yield axios.put('/api/movies', action.payload);
@@ -28,7 +28,7 @@ function* updateMovies(action){
       console.log('PUT ERROR:',err);
     }
   }
-
+//create saga function for GET for movies
 function* getMovies(){
     try{
         const response = yield axios.get('/api/movies')
@@ -38,6 +38,7 @@ function* getMovies(){
         
     }
 }
+//create saga function for genres
 function* getGenres(){
     try{
         const response = yield axios.get('/api/genres')
@@ -48,7 +49,7 @@ function* getGenres(){
     }
 }
 
-
+//create saga function for details
 function* setInfoMovie(action){
     console.log(action.payload)
     try{

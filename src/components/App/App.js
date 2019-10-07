@@ -12,9 +12,9 @@ class App extends Component {
   // Renders the entire app on the DOM
   render() {
     return (
+      //create routes for pages
       <Router>
       <div className="App">
-     
        <Route path='/' exact component={Movie}/>
        <Route path='/movie/:id' render={({match})=><InfoPage match={match}/>}/>
        <Route path='/edit/:id' render={({match})=><Edit match={match}/>}/>

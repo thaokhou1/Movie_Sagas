@@ -8,6 +8,7 @@ class MovieList extends Component {
         // use component did mount to dispatch an action to request the movieList from the API
         this.getMovies();
     }
+    //create GET function to grab from server the movies
     getMovies() {
         this.props.dispatch({ type: 'GET_MOVIES' })
     }
