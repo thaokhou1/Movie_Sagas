@@ -28,8 +28,8 @@ class MovieItem extends Component {
                             </Grid>
                         )
                     })}
-                </Grid>
-         </div>
+            </Grid>
+            </div>
          </Router>
         )
     }
