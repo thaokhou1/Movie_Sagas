@@ -40,11 +40,11 @@ class Edit extends Component {
   }
   handleSubmit = () => {
     this.props.dispatch({ type: 'UPDATE_MOVIES', payload: this.state.movie })
-    this.props.history.push(`/movie/${this.props.match.params.id}`)
+    this.props.history.push(`/details/${this.props.match.params.id}`)
     console.log('In submit');
   }
   handleCancel = () =>{
-    this.props.history.push(`/movie/${this.props.match.params.id}`)
+    this.props.history.push(`/details/${this.props.match.params.id}`)
   }
 
   render() {

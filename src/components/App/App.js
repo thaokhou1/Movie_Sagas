@@ -16,7 +16,7 @@ class App extends Component {
       <Router>
       <div className="App">
        <Route path='/' exact component={Movie}/>
-       <Route path='/movie/:id' render={({match})=><InfoPage match={match}/>}/>
+       <Route path='/details/:id' render={({match})=><InfoPage match={match}/>}/>
        <Route path='/edit/:id' render={({match})=><Edit match={match}/>}/>
       </div>
       </Router>
