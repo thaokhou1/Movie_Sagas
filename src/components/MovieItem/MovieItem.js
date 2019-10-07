@@ -23,7 +23,7 @@ class MovieItem extends Component {
                             <Grid item md key={movie.id}>
                                 <Paper>
                                     <p>{movie.title}</p>
-                                    <img alt={movie.title} src={movie.poster} onClick={() => this.moreInfo(this.props.movies.id)} />
+                                    <img alt={movie.title} src={movie.poster} onClick={() => this.moreInfo(movie.id)} />
                                 </Paper>
                             </Grid>
                         )
