@@ -2,7 +2,7 @@
 Installations:
 ----------------------
 1.Create a database named 'saga_movies_weekend',
-The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
+The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed.
 
 2.Open up your editor of choice and run an npm install
 
